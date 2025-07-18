@@ -127,7 +127,7 @@ class ProdutoDAO(DAO):
                 Produto.descricao
 '''
         registros = self.executar_select(sql)
-        dados = []
+        dados = list()
         for reg in registros:
             categoria = Categoria(id=reg[4], descricao=reg[5])
             produto = Produto(id=reg[0], descricao=reg[1], preco_unitario=reg[2], quantidade_estoque=reg[3], categoria=categoria)
