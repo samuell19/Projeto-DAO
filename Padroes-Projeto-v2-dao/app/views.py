@@ -70,7 +70,6 @@ def categorias(request, acao=None, id=None):
 
 
 def obter_categorias():
-    """Função auxiliar para buscar todas as categorias."""
     dao = CategoriaDAO()
     return dao.selecionar_todos()
 
